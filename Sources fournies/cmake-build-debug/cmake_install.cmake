@@ -1,4 +1,4 @@
-# Install script for directory: /Users/remilevesque/Downloads/TP1-énoncé/Sources fournies
+# Install script for directory: /Users/remilevesque/TP1-énoncé/Sources fournies
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/remilevesque/TP1-énoncé/Sources fournies/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

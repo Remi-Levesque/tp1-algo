@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/DonneesGTFS.h
+/Users/remilevesque/TP1-énoncé/Sources fournies/DonneesGTFS.h
 string
 -
 vector
@@ -24,21 +24,21 @@ iostream
 sstream
 -
 auxiliaires.h
-/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/auxiliaires.h
+/Users/remilevesque/TP1-énoncé/Sources fournies/auxiliaires.h
 ligne.h
-/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/ligne.h
+/Users/remilevesque/TP1-énoncé/Sources fournies/ligne.h
 station.h
-/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/station.h
+/Users/remilevesque/TP1-énoncé/Sources fournies/station.h
 voyage.h
-/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/voyage.h
+/Users/remilevesque/TP1-énoncé/Sources fournies/voyage.h
 arret.h
-/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/arret.h
+/Users/remilevesque/TP1-énoncé/Sources fournies/arret.h
 coordonnees.h
-/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/coordonnees.h
+/Users/remilevesque/TP1-énoncé/Sources fournies/coordonnees.h
 
-/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/aRemettrePourTP1.cpp
+/Users/remilevesque/TP1-énoncé/Sources fournies/aRemettrePourTP1.cpp
 DonneesGTFS.h
-/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/DonneesGTFS.h
+/Users/remilevesque/TP1-énoncé/Sources fournies/DonneesGTFS.h
 iostream
 -
 fstream
@@ -52,15 +52,15 @@ sstream
 vector
 -
 coordonnees.h
-/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/coordonnees.h
+/Users/remilevesque/TP1-énoncé/Sources fournies/coordonnees.h
 
-/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/arret.h
+/Users/remilevesque/TP1-énoncé/Sources fournies/arret.h
 memory
 -
 auxiliaires.h
-/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/auxiliaires.h
+/Users/remilevesque/TP1-énoncé/Sources fournies/auxiliaires.h
 
-/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/auxiliaires.h
+/Users/remilevesque/TP1-énoncé/Sources fournies/auxiliaires.h
 vector
 -
 string
@@ -72,13 +72,13 @@ iostream
 sstream
 -
 time.h
-/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/time.h
+/Users/remilevesque/TP1-énoncé/Sources fournies/time.h
 unordered_set
 -
 algorithm
 -
 
-/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/coordonnees.h
+/Users/remilevesque/TP1-énoncé/Sources fournies/coordonnees.h
 cmath
 -
 exception
@@ -90,7 +90,7 @@ iostream
 sstream
 -
 
-/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/ligne.h
+/Users/remilevesque/TP1-énoncé/Sources fournies/ligne.h
 string
 -
 vector
@@ -102,7 +102,7 @@ exception
 algorithm
 -
 
-/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/station.h
+/Users/remilevesque/TP1-énoncé/Sources fournies/station.h
 string
 -
 vector
@@ -114,13 +114,13 @@ unordered_set
 iostream
 -
 coordonnees.h
-/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/coordonnees.h
+/Users/remilevesque/TP1-énoncé/Sources fournies/coordonnees.h
 arret.h
-/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/arret.h
+/Users/remilevesque/TP1-énoncé/Sources fournies/arret.h
 auxiliaires.h
-/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/auxiliaires.h
+/Users/remilevesque/TP1-énoncé/Sources fournies/auxiliaires.h
 
-/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/voyage.h
+/Users/remilevesque/TP1-énoncé/Sources fournies/voyage.h
 string
 -
 set
@@ -128,7 +128,7 @@ set
 memory
 -
 arret.h
-/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/arret.h
+/Users/remilevesque/TP1-énoncé/Sources fournies/arret.h
 auxiliaires.h
-/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/auxiliaires.h
+/Users/remilevesque/TP1-énoncé/Sources fournies/auxiliaires.h
 

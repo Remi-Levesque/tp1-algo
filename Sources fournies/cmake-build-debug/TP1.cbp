@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/cmake-build-debug"/>
+				<Option working_dir="/Users/remilevesque/TP1-énoncé/Sources fournies/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/Users/remilevesque/Downloads/TP1-énoncé/Sources\ fournies/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/remilevesque/Downloads/TP1-énoncé/Sources\ fournies/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/Users/remilevesque/Downloads/TP1-énoncé/Sources\ fournies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/remilevesque/Downloads/TP1-énoncé/Sources\ fournies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/remilevesque/TP1-énoncé/Sources\ fournies/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/remilevesque/TP1-énoncé/Sources\ fournies/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/remilevesque/TP1-énoncé/Sources\ fournies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/remilevesque/TP1-énoncé/Sources\ fournies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/cmake-build-debug"/>
+				<Option working_dir="/Users/remilevesque/TP1-énoncé/Sources fournies/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/Users/remilevesque/Downloads/TP1-énoncé/Sources\ fournies/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/remilevesque/Downloads/TP1-énoncé/Sources\ fournies/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/Users/remilevesque/Downloads/TP1-énoncé/Sources\ fournies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/remilevesque/Downloads/TP1-énoncé/Sources\ fournies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/remilevesque/TP1-énoncé/Sources\ fournies/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/remilevesque/TP1-énoncé/Sources\ fournies/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/remilevesque/TP1-énoncé/Sources\ fournies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/remilevesque/TP1-énoncé/Sources\ fournies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/cmake-build-debug"/>
+				<Option working_dir="/Users/remilevesque/TP1-énoncé/Sources fournies/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/Users/remilevesque/Downloads/TP1-énoncé/Sources\ fournies/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/remilevesque/Downloads/TP1-énoncé/Sources\ fournies/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/Users/remilevesque/Downloads/TP1-énoncé/Sources\ fournies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/remilevesque/Downloads/TP1-énoncé/Sources\ fournies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/remilevesque/TP1-énoncé/Sources\ fournies/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/remilevesque/TP1-énoncé/Sources\ fournies/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/remilevesque/TP1-énoncé/Sources\ fournies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/remilevesque/TP1-énoncé/Sources\ fournies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="main">
-				<Option output="/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/main" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies"/>
+				<Option output="/Users/remilevesque/TP1-énoncé/Sources fournies/main" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/remilevesque/TP1-énoncé/Sources fournies"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -52,15 +52,15 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/Users/remilevesque/Downloads/TP1-énoncé/Sources\ fournies/cmake-build-debug/Makefile&quot;  VERBOSE=1 main"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/remilevesque/Downloads/TP1-énoncé/Sources\ fournies/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/Users/remilevesque/Downloads/TP1-énoncé/Sources\ fournies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/remilevesque/Downloads/TP1-énoncé/Sources\ fournies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/remilevesque/TP1-énoncé/Sources\ fournies/cmake-build-debug/Makefile&quot;  VERBOSE=1 main"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/remilevesque/TP1-énoncé/Sources\ fournies/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/remilevesque/TP1-énoncé/Sources\ fournies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/remilevesque/TP1-énoncé/Sources\ fournies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="main/fast">
-				<Option output="/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/main" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies"/>
+				<Option output="/Users/remilevesque/TP1-énoncé/Sources fournies/main" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/remilevesque/TP1-énoncé/Sources fournies"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -73,15 +73,15 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/Users/remilevesque/Downloads/TP1-énoncé/Sources\ fournies/cmake-build-debug/Makefile&quot;  VERBOSE=1 main/fast"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/remilevesque/Downloads/TP1-énoncé/Sources\ fournies/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/Users/remilevesque/Downloads/TP1-énoncé/Sources\ fournies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/remilevesque/Downloads/TP1-énoncé/Sources\ fournies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/remilevesque/TP1-énoncé/Sources\ fournies/cmake-build-debug/Makefile&quot;  VERBOSE=1 main/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/remilevesque/TP1-énoncé/Sources\ fournies/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/remilevesque/TP1-énoncé/Sources\ fournies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/remilevesque/TP1-énoncé/Sources\ fournies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="TP1">
-				<Option output="/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/libTP1.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/cmake-build-debug"/>
+				<Option output="/Users/remilevesque/TP1-énoncé/Sources fournies/libTP1.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/remilevesque/TP1-énoncé/Sources fournies/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
@@ -94,15 +94,15 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/Users/remilevesque/Downloads/TP1-énoncé/Sources\ fournies/cmake-build-debug/Makefile&quot;  VERBOSE=1 TP1"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/remilevesque/Downloads/TP1-énoncé/Sources\ fournies/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/Users/remilevesque/Downloads/TP1-énoncé/Sources\ fournies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/remilevesque/Downloads/TP1-énoncé/Sources\ fournies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/remilevesque/TP1-énoncé/Sources\ fournies/cmake-build-debug/Makefile&quot;  VERBOSE=1 TP1"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/remilevesque/TP1-énoncé/Sources\ fournies/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/remilevesque/TP1-énoncé/Sources\ fournies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/remilevesque/TP1-énoncé/Sources\ fournies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="TP1/fast">
-				<Option output="/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/libTP1.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/cmake-build-debug"/>
+				<Option output="/Users/remilevesque/TP1-énoncé/Sources fournies/libTP1.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/remilevesque/TP1-énoncé/Sources fournies/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
@@ -115,62 +115,62 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/Users/remilevesque/Downloads/TP1-énoncé/Sources\ fournies/cmake-build-debug/Makefile&quot;  VERBOSE=1 TP1/fast"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/remilevesque/Downloads/TP1-énoncé/Sources\ fournies/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/Users/remilevesque/Downloads/TP1-énoncé/Sources\ fournies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/remilevesque/Downloads/TP1-énoncé/Sources\ fournies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/remilevesque/TP1-énoncé/Sources\ fournies/cmake-build-debug/Makefile&quot;  VERBOSE=1 TP1/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/remilevesque/TP1-énoncé/Sources\ fournies/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/remilevesque/TP1-énoncé/Sources\ fournies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/remilevesque/TP1-énoncé/Sources\ fournies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/DonneesGTFS.cpp">
+		<Unit filename="/Users/remilevesque/TP1-énoncé/Sources fournies/DonneesGTFS.cpp">
 			<Option target="TP1"/>
 		</Unit>
-		<Unit filename="/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/DonneesGTFS.h">
+		<Unit filename="/Users/remilevesque/TP1-énoncé/Sources fournies/DonneesGTFS.h">
 			<Option target="TP1"/>
 		</Unit>
-		<Unit filename="/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/aRemettrePourTP1.cpp">
+		<Unit filename="/Users/remilevesque/TP1-énoncé/Sources fournies/aRemettrePourTP1.cpp">
 			<Option target="TP1"/>
 		</Unit>
-		<Unit filename="/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/arret.cpp">
+		<Unit filename="/Users/remilevesque/TP1-énoncé/Sources fournies/arret.cpp">
 			<Option target="TP1"/>
 		</Unit>
-		<Unit filename="/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/arret.h">
+		<Unit filename="/Users/remilevesque/TP1-énoncé/Sources fournies/arret.h">
 			<Option target="TP1"/>
 		</Unit>
-		<Unit filename="/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/auxiliaires.cpp">
+		<Unit filename="/Users/remilevesque/TP1-énoncé/Sources fournies/auxiliaires.cpp">
 			<Option target="TP1"/>
 		</Unit>
-		<Unit filename="/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/auxiliaires.h">
+		<Unit filename="/Users/remilevesque/TP1-énoncé/Sources fournies/auxiliaires.h">
 			<Option target="TP1"/>
 		</Unit>
-		<Unit filename="/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/coordonnees.cpp">
+		<Unit filename="/Users/remilevesque/TP1-énoncé/Sources fournies/coordonnees.cpp">
 			<Option target="TP1"/>
 		</Unit>
-		<Unit filename="/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/coordonnees.h">
+		<Unit filename="/Users/remilevesque/TP1-énoncé/Sources fournies/coordonnees.h">
 			<Option target="TP1"/>
 		</Unit>
-		<Unit filename="/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/ligne.cpp">
+		<Unit filename="/Users/remilevesque/TP1-énoncé/Sources fournies/ligne.cpp">
 			<Option target="TP1"/>
 		</Unit>
-		<Unit filename="/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/ligne.h">
+		<Unit filename="/Users/remilevesque/TP1-énoncé/Sources fournies/ligne.h">
 			<Option target="TP1"/>
 		</Unit>
-		<Unit filename="/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/main.cpp">
+		<Unit filename="/Users/remilevesque/TP1-énoncé/Sources fournies/main.cpp">
 			<Option target="main"/>
 		</Unit>
-		<Unit filename="/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/station.cpp">
+		<Unit filename="/Users/remilevesque/TP1-énoncé/Sources fournies/station.cpp">
 			<Option target="TP1"/>
 		</Unit>
-		<Unit filename="/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/station.h">
+		<Unit filename="/Users/remilevesque/TP1-énoncé/Sources fournies/station.h">
 			<Option target="TP1"/>
 		</Unit>
-		<Unit filename="/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/voyage.cpp">
+		<Unit filename="/Users/remilevesque/TP1-énoncé/Sources fournies/voyage.cpp">
 			<Option target="TP1"/>
 		</Unit>
-		<Unit filename="/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/voyage.h">
+		<Unit filename="/Users/remilevesque/TP1-énoncé/Sources fournies/voyage.h">
 			<Option target="TP1"/>
 		</Unit>
-		<Unit filename="/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/CMakeLists.txt">
+		<Unit filename="/Users/remilevesque/TP1-énoncé/Sources fournies/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

@@ -23,6 +23,53 @@ ifstream leFichierStations;
 //! \throws logic_error si un problème survient avec la lecture du fichier
 void DonneesGTFS::ajouterLignes(const std::string &p_nomFichier)
 {
+//    map<char, CategorieBus> my_map = {
+//            { "97BF0D", CategorieBus::METRO_BUS },
+//            { "013888", CategorieBus::LEBUS},
+//            { "E04503", CategorieBus::EXPRESS },
+//            { "1A171B", CategorieBus::COUCHE_TARD },
+//            { "003888", CategorieBus::COUCHE_TARD },
+//    };
+
+    ostringstream nomDufichier;
+
+    nomDufichier << "../" << p_nomFichier;
+
+    std::ifstream file(nomDufichier.str());
+    std::string str;
+    while(std::getline(file, str)){
+        if(str == "route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color"){
+            continue;
+        }
+        str.erase(remove(str.begin(), str.end(), '"'), str.end());
+        vector<string> ligne_vector = string_to_vector(str, ',');
+
+//        Station(unsigned int p_id, const std::string & p_nom, const std::string & p_description,const Coordonnees & p_coords);
+//        cout << typeid(stod(frais[4])).name() << endl;
+//        Coordonnees coord = Coordonnees(frais[3], frais[4]);
+//        double ticail = frais[3];
+
+        if(ligne_vector[7]=="97BF0D"){
+            Ligne ligne = Ligne(stoul(ligne_vector[0]), ligne_vector[2], ligne_vector[4], CategorieBus::COUCHE_TARD);
+            m_lignes[stoul(ligne_vector[0])] = ligne;
+//            cout << ligne << endl;
+        } else if(ligne_vector[7]=="013888"){
+            Ligne ligne = Ligne(stoul(ligne_vector[0]), ligne_vector[2], ligne_vector[4], CategorieBus::LEBUS);
+            m_lignes[stoul(ligne_vector[0])] = ligne;
+//            cout << ligne << endl;
+        } else if(ligne_vector[7]=="E04503"){
+            Ligne ligne = Ligne(stoul(ligne_vector[0]), ligne_vector[2], ligne_vector[4], CategorieBus::EXPRESS);
+            m_lignes[stoul(ligne_vector[0])] = ligne;
+//            cout << ligne << endl;
+        } else {
+            Ligne ligne = Ligne(stoul(ligne_vector[0]), ligne_vector[2], ligne_vector[4], CategorieBus::COUCHE_TARD);
+            m_lignes[stoul(ligne_vector[0])] = ligne;
+//            cout << ligne << endl;
+        }
+
+//        Ligne ligne = Ligne(stoul(ligne_vector[0]), ligne_vector[2], ligne_vector[4], my_map.find(ligne_vector[7])->second);
+//        cout << ligne << endl;
+    }
 
 }
 
@@ -46,13 +93,15 @@ void DonneesGTFS::ajouterStations(const std::string &p_nomFichier)
         str.erase(remove(str.begin(), str.end(), '"'), str.end());
 //        cout << str << endl;
         vector<string> frais = string_to_vector(str, ',');
-        for(int i=0;i<frais.size();i++){
-            cout<<frais[i]<<endl;
-        }
+
 //        Station(unsigned int p_id, const std::string & p_nom, const std::string & p_description,const Coordonnees & p_coords);
+//        cout << typeid(stod(frais[4])).name() << endl;
 //        Coordonnees coord = Coordonnees(frais[3], frais[4]);
 //        double ticail = frais[3];
-        Station(frais[0], frais[1], frais[2], Coordonnees(frais[3],frais[4]));
+        Station station = Station(stoul(frais[0]), frais[1], frais[2], Coordonnees(stod(frais[3]),stod(frais[4])));
+        m_stations[stoul(frais[0])] = station;
+
+//        cout << station << endl;
     }
 }
 
@@ -78,7 +127,7 @@ void DonneesGTFS::ajouterTransferts(const std::string &p_nomFichier)
 void DonneesGTFS::ajouterServices(const std::string &p_nomFichier)
 {
 
-//écrire votre code ici
+
 
 }
 
