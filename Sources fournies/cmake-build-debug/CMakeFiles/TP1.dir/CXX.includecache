@@ -1,0 +1,134 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/DonneesGTFS.h
+string
+-
+vector
+-
+map
+-
+unordered_map
+-
+unordered_set
+-
+fstream
+-
+iostream
+-
+sstream
+-
+auxiliaires.h
+/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/auxiliaires.h
+ligne.h
+/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/ligne.h
+station.h
+/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/station.h
+voyage.h
+/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/voyage.h
+arret.h
+/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/arret.h
+coordonnees.h
+/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/coordonnees.h
+
+/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/aRemettrePourTP1.cpp
+DonneesGTFS.h
+/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/DonneesGTFS.h
+iostream
+-
+fstream
+-
+stdio.h
+-
+string
+-
+sstream
+-
+vector
+-
+coordonnees.h
+/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/coordonnees.h
+
+/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/arret.h
+memory
+-
+auxiliaires.h
+/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/auxiliaires.h
+
+/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/auxiliaires.h
+vector
+-
+string
+-
+fstream
+-
+iostream
+-
+sstream
+-
+time.h
+/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/time.h
+unordered_set
+-
+algorithm
+-
+
+/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/coordonnees.h
+cmath
+-
+exception
+-
+stdexcept
+-
+iostream
+-
+sstream
+-
+
+/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/ligne.h
+string
+-
+vector
+-
+iostream
+-
+exception
+-
+algorithm
+-
+
+/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/station.h
+string
+-
+vector
+-
+map
+-
+unordered_set
+-
+iostream
+-
+coordonnees.h
+/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/coordonnees.h
+arret.h
+/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/arret.h
+auxiliaires.h
+/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/auxiliaires.h
+
+/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/voyage.h
+string
+-
+set
+-
+memory
+-
+arret.h
+/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/arret.h
+auxiliaires.h
+/Users/remilevesque/Downloads/TP1-énoncé/Sources fournies/auxiliaires.h
+
