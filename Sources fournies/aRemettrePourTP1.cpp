@@ -15,9 +15,6 @@
 using namespace std;
 
 
-
-ifstream leFichierStations;
-
 //! \brief ajoute les lignes dans l'objet GTFS
 //! \param[in] p_nomFichier: le nom du fichier contenant les lignes
 //! \throws logic_error si un problème survient avec la lecture du fichier
@@ -51,21 +48,31 @@ void DonneesGTFS::ajouterLignes(const std::string &p_nomFichier)
 
         if(ligne_vector[7]=="97BF0D"){
             Ligne ligne = Ligne(stoul(ligne_vector[0]), ligne_vector[2], ligne_vector[4], CategorieBus::COUCHE_TARD);
-            m_lignes[stoul(ligne_vector[0])] = ligne;
-//            cout << ligne << endl;
+            //m_lignes[stoul(ligne_vector[0])] = ligne;
+            m_lignes.insert(pair <unsigned int, Ligne> (stoul(ligne_vector[0]), ligne));
+            m_lignes_par_numero.insert(pair <string, Ligne> (ligne_vector[2], ligne));
         } else if(ligne_vector[7]=="013888"){
             Ligne ligne = Ligne(stoul(ligne_vector[0]), ligne_vector[2], ligne_vector[4], CategorieBus::LEBUS);
-            m_lignes[stoul(ligne_vector[0])] = ligne;
-//            cout << ligne << endl;
+            m_lignes.insert(pair <unsigned int, Ligne> (stoul(ligne_vector[0]), ligne));
+            m_lignes_par_numero.insert(pair <string, Ligne> (ligne_vector[2], ligne));
         } else if(ligne_vector[7]=="E04503"){
             Ligne ligne = Ligne(stoul(ligne_vector[0]), ligne_vector[2], ligne_vector[4], CategorieBus::EXPRESS);
-            m_lignes[stoul(ligne_vector[0])] = ligne;
-//            cout << ligne << endl;
+            m_lignes.insert(pair <unsigned int, Ligne> (stoul(ligne_vector[0]), ligne));
+            m_lignes_par_numero.insert(pair <string, Ligne> (ligne_vector[2], ligne));
         } else {
             Ligne ligne = Ligne(stoul(ligne_vector[0]), ligne_vector[2], ligne_vector[4], CategorieBus::COUCHE_TARD);
-            m_lignes[stoul(ligne_vector[0])] = ligne;
-//            cout << ligne << endl;
+            m_lignes.insert(pair <unsigned int, Ligne> (stoul(ligne_vector[0]), ligne));
+            m_lignes_par_numero.insert(pair <string, Ligne> (ligne_vector[2], ligne));
         }
+
+
+/// a checker avec tom si tout est chill ici
+//        for(unordered_map<unsigned int, Ligne>::iterator it = m_lignes.begin(); it != m_lignes.end(); ++it) {
+//            cout << it->first << "\n";
+//            cout << it->second << "\n";
+//        }
+
+
 
 //        Ligne ligne = Ligne(stoul(ligne_vector[0]), ligne_vector[2], ligne_vector[4], my_map.find(ligne_vector[7])->second);
 //        cout << ligne << endl;
@@ -127,8 +134,29 @@ void DonneesGTFS::ajouterTransferts(const std::string &p_nomFichier)
 void DonneesGTFS::ajouterServices(const std::string &p_nomFichier)
 {
 
+    ostringstream nomDufichier;
 
+    nomDufichier << "../" << p_nomFichier;
 
+    std::ifstream file(nomDufichier.str());
+    std::string str;
+
+    while(std::getline(file, str)) {
+        if (str == "service_id,date,exception_type") {
+            continue;
+        }
+
+        vector<string> frais = string_to_vector(str, ',');
+
+//        Date(unsigned int an, unsigned int mois, unsigned int jour);
+
+        Date date = Date(stoul(frais[1].substr(0,4)), stoul(frais[1].substr(4,2)), stoul(frais[1].substr(6,2)));
+
+        if(frais[2] == "1" && date == m_date){
+            m_services.insert(frais[0]);
+        }
+
+    }
 }
 
 //! \brief ajoute les voyages de la date
@@ -138,8 +166,42 @@ void DonneesGTFS::ajouterServices(const std::string &p_nomFichier)
 void DonneesGTFS::ajouterVoyagesDeLaDate(const std::string &p_nomFichier)
 {
 
-//écrire votre code ici
+    ostringstream nomDufichier;
 
+    nomDufichier << "../" << p_nomFichier;
+
+    std::ifstream file(nomDufichier.str());
+    std::string str;
+
+    while(std::getline(file, str)) {
+        if (str == "route_id,service_id,trip_id,trip_headsign,trip_short_name,direction_id,block_id,shape_id,wheelchair_accessible") {
+            continue;
+        }
+
+        vector<string> frais = string_to_vector(str, ',');
+
+        for (const auto& elem: m_services) { /// a voir pas sur que cest efficace tout ca
+            if(frais[1] == elem){
+                m_voyages[frais[2]] = Voyage(frais[2], stoul(frais[0]), frais[1], frais[3]);
+            }
+        }
+
+//        cout << frais[1] << endl;
+
+//        const bool is_in = frais.find(frais[1]) != frais.end();
+
+
+//        if(frais[1] )
+
+//        Voyage::Voyage(const std::string &p_id, unsigned int p_ligne_id, const std::string &p_service_id,
+//        const std::string &p_destination)
+//
+//        Voyage voyage = Voyage(frais[0],stoul());
+
+
+
+//        cout << m_date << endl;
+    }
 }
 
 //! \brief ajoute les arrets aux voyages présents dans le GTFS si l'heure du voyage appartient à l'intervalle de temps du GTFS
@@ -148,12 +210,99 @@ void DonneesGTFS::ajouterVoyagesDeLaDate(const std::string &p_nomFichier)
 //! \param[in] p_nomFichier: le nom du fichier contenant les arrets
 //! \post assigne m_tousLesArretsPresents à true
 //! \throws logic_error si un problème survient avec la lecture du fichier
-void DonneesGTFS::ajouterArretsDesVoyagesDeLaDate(const std::string &p_nomFichier)
-{
+void DonneesGTFS::ajouterArretsDesVoyagesDeLaDate(const std::string &p_nomFichier) {
 
-//écrire votre code ici
+    ostringstream nomDufichier;
 
-}
+    nomDufichier << "../" << p_nomFichier;
+
+    std::ifstream file(nomDufichier.str());
+    std::string str;
+
+    while (std::getline(file, str)) {
+        if (str == "trip_id,arrival_time,departure_time,stop_id,stop_sequence,pickup_type,drop_off_type") {
+            continue;
+        }
+
+        vector<string> frais = string_to_vector(str, ',');
+
+
+
+        if(m_voyages.find(frais[0]) != m_voyages.end()){ /// si on trouve le trip_id d'un voyage qui match avec un arret
+
+            Heure heure_arrivee = Heure(stoi(frais[1].substr(0,2)), stoi(frais[1].substr(3,2)), stoi(frais[1].substr(6,2)));
+            Heure heure_depart = Heure(stoi(frais[2].substr(0,2)), stoi(frais[2].substr(3,2)), stoi(frais[2].substr(6,2)));
+
+            if(heure_depart >= m_now1 && heure_arrivee < m_now2){ /// si c'est entre les heures valides
+                Arret::Ptr a_ptr = make_shared<Arret>(stoul(frais[3]), heure_arrivee, heure_depart, stoul(frais[4]), frais[0]);
+                m_voyages[frais[0]].ajouterArret(a_ptr);
+                m_stations[stoi(frais[3])].addArret(a_ptr);
+                m_nbArrets += 1; /// wtf ca donne le nombre de voyages
+            }
+        }
+    }
+
+    map<string, Voyage> copy_voyages = m_voyages;
+
+
+    for(auto &it: copy_voyages){
+        /// si ya pas d'arret pour le voyage, on efface
+        if(it.second.getNbArrets() == 0){
+            m_voyages.erase(it.first);
+        }
+    }
+
+    map<unsigned int, Station> copy_stations = m_stations;
+
+
+    for(auto &it: copy_stations){
+        if(it.second.getNbArrets() == 0){
+            m_stations.erase(it.first);
+        }
+    }
+
+
+
+
+
+//
+//        for(set<Arret::Ptr, Voyage::compArret>::iterator it2=it->second.getArrets().begin();it2!= it->second.getArrets().end(); ++it2){
+//            //cout << (*it2)->getStationId() << endl; /// ca sort les numeros de station des arrets
+//            m_stations[(*it2)->getStationId()].addArret(*it2);
+//        }
+//
+//        for(std::map<unsigned int, Station>::iterator it3=m_stations.begin();it3!=m_stations.end();++it3){
+//            if(it3->second.getNbArrets() == 0){
+//                m_stations.erase(it3);
+//            }
+//        }
+
+        m_tousLesArretsPresents = true;
+
+
+
+
+
+
+
+
+
+        /// ajouter copie de Arret::Ptr aux stations ayant le meme stop_id
+
+//        for(set<Arret::Ptr, Voyage::compArret>::iterator it2=it->second.getArrets().begin(); it2!= it->second.getArrets().end(); ++it2){
+//           if(*it2)
+//        }
+
+            //if(it->second.getArrets())
+
+
+    }
+
+//    for(map<unsigned int, Station>::iterator it=m_stations.begin(); it!=m_stations.end(); ++it) {
+//        if()
+//    }
+
+
 
 
 

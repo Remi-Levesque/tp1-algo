@@ -34,12 +34,12 @@ int main()
     cout << "Nombres de voyages = " << donnees_rtc.getNbVoyages() << endl;
     cout << "Nombre d'arrets = " << donnees_rtc.getNbArrets() << endl << endl;
 
-    donnees_rtc.afficherLignes();
-    donnees_rtc.afficherStations();
-    donnees_rtc.afficherStationsDeTransfert();
-    donnees_rtc.afficherTransferts();
-    donnees_rtc.afficherArretsParVoyages();
-    donnees_rtc.afficherArretsParStations();
+//    donnees_rtc.afficherLignes();
+//    donnees_rtc.afficherStations();
+//    donnees_rtc.afficherStationsDeTransfert();
+//    donnees_rtc.afficherTransferts();
+//    donnees_rtc.afficherArretsParVoyages();
+//    donnees_rtc.afficherArretsParStations();
 
     return 0;
 }
