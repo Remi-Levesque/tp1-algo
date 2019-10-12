@@ -20,13 +20,6 @@ using namespace std;
 //! \throws logic_error si un problème survient avec la lecture du fichier
 void DonneesGTFS::ajouterLignes(const std::string &p_nomFichier)
 {
-//    map<char, CategorieBus> my_map = {
-//            { "97BF0D", CategorieBus::METRO_BUS },
-//            { "013888", CategorieBus::LEBUS},
-//            { "E04503", CategorieBus::EXPRESS },
-//            { "1A171B", CategorieBus::COUCHE_TARD },
-//            { "003888", CategorieBus::COUCHE_TARD },
-//    };
 
     ostringstream nomDufichier;
 
@@ -41,14 +34,10 @@ void DonneesGTFS::ajouterLignes(const std::string &p_nomFichier)
         str.erase(remove(str.begin(), str.end(), '"'), str.end());
         vector<string> ligne_vector = string_to_vector(str, ',');
 
-//        Station(unsigned int p_id, const std::string & p_nom, const std::string & p_description,const Coordonnees & p_coords);
-//        cout << typeid(stod(frais[4])).name() << endl;
-//        Coordonnees coord = Coordonnees(frais[3], frais[4]);
-//        double ticail = frais[3];
+
 
         if(ligne_vector[7]=="97BF0D"){
             Ligne ligne = Ligne(stoul(ligne_vector[0]), ligne_vector[2], ligne_vector[4], CategorieBus::COUCHE_TARD);
-            //m_lignes[stoul(ligne_vector[0])] = ligne;
             m_lignes.insert(pair <unsigned int, Ligne> (stoul(ligne_vector[0]), ligne));
             m_lignes_par_numero.insert(pair <string, Ligne> (ligne_vector[2], ligne));
         } else if(ligne_vector[7]=="013888"){
@@ -65,17 +54,6 @@ void DonneesGTFS::ajouterLignes(const std::string &p_nomFichier)
             m_lignes_par_numero.insert(pair <string, Ligne> (ligne_vector[2], ligne));
         }
 
-
-/// a checker avec tom si tout est chill ici
-//        for(unordered_map<unsigned int, Ligne>::iterator it = m_lignes.begin(); it != m_lignes.end(); ++it) {
-//            cout << it->first << "\n";
-//            cout << it->second << "\n";
-//        }
-
-
-
-//        Ligne ligne = Ligne(stoul(ligne_vector[0]), ligne_vector[2], ligne_vector[4], my_map.find(ligne_vector[7])->second);
-//        cout << ligne << endl;
     }
 
 }
@@ -98,17 +76,11 @@ void DonneesGTFS::ajouterStations(const std::string &p_nomFichier)
             continue;
         }
         str.erase(remove(str.begin(), str.end(), '"'), str.end());
-//        cout << str << endl;
         vector<string> frais = string_to_vector(str, ',');
 
-//        Station(unsigned int p_id, const std::string & p_nom, const std::string & p_description,const Coordonnees & p_coords);
-//        cout << typeid(stod(frais[4])).name() << endl;
-//        Coordonnees coord = Coordonnees(frais[3], frais[4]);
-//        double ticail = frais[3];
         Station station = Station(stoul(frais[0]), frais[1], frais[2], Coordonnees(stod(frais[3]),stod(frais[4])));
         m_stations[stoul(frais[0])] = station;
 
-//        cout << station << endl;
     }
 }
 
@@ -152,33 +124,6 @@ void DonneesGTFS::ajouterTransferts(const std::string &p_nomFichier) {
 
         }
     }
-
-
-//    if
-
-    /// on itère sur l'ensemble des stations de m_stations
-//    for(auto &item : m_stations){
-//        /// si le m_id de la station est égale au premier m_id de la ligne du fichier transfers.txt
-//        if(item.first == stoul(frais[0])){
-//            /// si le deuxième m_id de la ligne du fichier transfers.txt est présent dans m_stations
-//            if(m_stations.find(stoul(frais[1])) != m_stations.end()){
-//                m_transferts.push_back(std::tuple<unsigned int, unsigned int, unsigned int> (stoul(frais[0]), stoul(frais[1]), stoul(frais[3])));
-//            }
-//
-//        /// si le m_id de la station est égale au deuxième m_id de la ligne du fichier transfers.txt
-//        } else if(item.first == stoul(frais[1])){
-//            /// si le premier m_id de la ligne du fichier transfers.txt est présent dans m_stations
-//            if(m_stations.find(stoul(frais[0])) != m_stations.end()){
-//                m_transferts.push_back(std::tuple<unsigned int, unsigned int, unsigned int> (stoul(frais[0]), stoul(frais[1]), stoul(frais[3])));
-//            }
-//        }
-//    }
-
-
-
-
-//    <std::tuple<unsigned int, unsigned int, unsigned int>
-
 }
 
 
@@ -242,22 +187,6 @@ void DonneesGTFS::ajouterVoyagesDeLaDate(const std::string &p_nomFichier)
                 m_voyages[frais[2]] = Voyage(frais[2], stoul(frais[0]), frais[1], frais[3]);
             }
         }
-
-//        cout << frais[1] << endl;
-
-//        const bool is_in = frais.find(frais[1]) != frais.end();
-
-
-//        if(frais[1] )
-
-//        Voyage::Voyage(const std::string &p_id, unsigned int p_ligne_id, const std::string &p_service_id,
-//        const std::string &p_destination)
-//
-//        Voyage voyage = Voyage(frais[0],stoul());
-
-
-
-//        cout << m_date << endl;
     }
 }
 
@@ -318,46 +247,12 @@ void DonneesGTFS::ajouterArretsDesVoyagesDeLaDate(const std::string &p_nomFichie
         }
     }
 
+    m_tousLesArretsPresents = true;
 
-
-
-
-//
-//        for(set<Arret::Ptr, Voyage::compArret>::iterator it2=it->second.getArrets().begin();it2!= it->second.getArrets().end(); ++it2){
-//            //cout << (*it2)->getStationId() << endl; /// ca sort les numeros de station des arrets
-//            m_stations[(*it2)->getStationId()].addArret(*it2);
-//        }
-//
-//        for(std::map<unsigned int, Station>::iterator it3=m_stations.begin();it3!=m_stations.end();++it3){
-//            if(it3->second.getNbArrets() == 0){
-//                m_stations.erase(it3);
-//            }
-//        }
-
-        m_tousLesArretsPresents = true;
-
-
-
-
-
-
-
-
-
-        /// ajouter copie de Arret::Ptr aux stations ayant le meme stop_id
-
-//        for(set<Arret::Ptr, Voyage::compArret>::iterator it2=it->second.getArrets().begin(); it2!= it->second.getArrets().end(); ++it2){
-//           if(*it2)
-//        }
-
-            //if(it->second.getArrets())
 
 
     }
 
-//    for(map<unsigned int, Station>::iterator it=m_stations.begin(); it!=m_stations.end(); ++it) {
-//        if()
-//    }
 
 
 
