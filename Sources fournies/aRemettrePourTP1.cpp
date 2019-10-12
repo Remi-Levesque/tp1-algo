@@ -120,10 +120,45 @@ void DonneesGTFS::ajouterStations(const std::string &p_nomFichier)
 //! \param[in] p_nomFichier: le nom du fichier contenant les station
 //! \throws logic_error si un problème survient avec la lecture du fichier
 //! \throws logic_error si tous les arrets de la date et de l'intervalle n'ont pas été ajoutés
-void DonneesGTFS::ajouterTransferts(const std::string &p_nomFichier)
-{
+void DonneesGTFS::ajouterTransferts(const std::string &p_nomFichier) {
 
-//écrire votre code ici
+    ostringstream nomDufichier;
+
+    nomDufichier << "../" << p_nomFichier;
+
+    std::ifstream file(nomDufichier.str());
+    std::string str;
+
+    while (std::getline(file, str)) {
+        if (str == "from_stop_id,to_stop_id,transfer_type,min_transfer_time") {
+            continue;
+        }
+    }
+
+    vector<string> frais = string_to_vector(str, ',');
+
+//    if
+
+    /// on itère sur l'ensemble des stations de m_stations
+    for(auto &item : m_stations){
+        /// si le m_id de la station est égale au premier m_id de la ligne du fichier transfers.txt
+        if(item.first == stoul(frais[0])){
+            /// si le deuxième m_id de la ligne du fichier transfers.txt est présent dans m_stations
+            if(m_stations.find(stoul(frais[1])) != m_stations.end()){
+                m_transferts.push_back(std::tuple<unsigned int, unsigned int, unsigned int> (stoul(frais[0]), stoul(frais[1]), stoul(frais[3])));
+            }
+
+        /// si le m_id de la station est égale au deuxième m_id de la ligne du fichier transfers.txt
+        } else if(item.first == stoul(frais[1])){
+            /// si le premier m_id de la ligne du fichier transfers.txt est présent dans m_stations
+            if(m_stations.find(stoul(frais[0])) != m_stations.end()){
+                m_transferts.push_back(std::tuple<unsigned int, unsigned int, unsigned int> (stoul(frais[0]), stoul(frais[1]), stoul(frais[3])));
+            }
+        }
+    }
+
+
+//    <std::tuple<unsigned int, unsigned int, unsigned int>
 
 }
 
@@ -173,7 +208,10 @@ void DonneesGTFS::ajouterVoyagesDeLaDate(const std::string &p_nomFichier)
     std::ifstream file(nomDufichier.str());
     std::string str;
 
+
     while(std::getline(file, str)) {
+        str.erase(remove(str.begin(), str.end(), '"'), str.end());
+
         if (str == "route_id,service_id,trip_id,trip_headsign,trip_short_name,direction_id,block_id,shape_id,wheelchair_accessible") {
             continue;
         }
